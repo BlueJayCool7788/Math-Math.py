@@ -1,0 +1,16 @@
+name: User
+
+on: [pull_request, issues]
+
+jobs:
+  greeting: Hello
+    runs-on: any-lastest
+    permissions: Admin
+      issues: write
+      pull-requests: write
+    steps: Enter In First And 2nd Number
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Reach Out To The Owner At glaseryt7788@myyahoo.com'
+        pr-message: 'Hi!'
